@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recruiting Platform</title>
+    <link rel="stylesheet" href="userpage.css">
+    <style>
+        /* Basic styles for the navigation bar */
+        nav {
+            background-color: #c4c0cd; /* Soft neutral color */
+            color: #0b0a0a;
+            padding: 10px;
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative; /* Needed for dropdown positioning */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            color: #0b0a0a; /* Dark text for contrast */
+            padding: 10px 15px; /* Padding for clickable area */
+            display: block; /* Block display for full area clickable */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #58be14; /* Change background on hover */
+            color: #fff; /* Change text color on hover */
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            display: none; /* Hide dropdown by default */
+            position: absolute; /* Position relative to the parent */
+            background-color: #f9f9f9; /* Light background for dropdown */
+            min-width: 160px; /* Minimum width for dropdown */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            z-index: 1; /* Ensure dropdown is above other elements */
+        }
+
+        nav ul li:hover .dropdown {
+            display: block; /* Show dropdown on hover */
+        }
+
+        .dropdown a {
+            padding: 10px; /* Padding for dropdown items */
+            color: #0b0a0a; /* Dark text for dropdown */
+        }
+
+        .dropdown a:hover {
+            background-color: #58be14; /* Change background on hover */
+            color: #fff; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+    
+
+<header>
+    <h1>Welcome to Smart Recruiting</h1>
+    <p>Your journey to finding the right talent starts here.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="minor.html">Home</a></li>
+        <li><a href="#about">About Us</a>
+            <div class="dropdown">
+                <a href="#values">Our Values</a>
+                <a href="#mission">Our Mission</a>
+            </div>
+        </li>
+        <li><a href="#job-listings">Job Listings</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h2>Join Our Team</h2>
+    <p>Explore exciting career opportunities and become part of our innovative team.</p>
+</section>
+
+<div id="content1">
+    <a href="content1.html">
+        <section id="about">
+            <img src="about_us.jpeg" alt="Our Company Culture">
+            <h3>Our Values</h3>
+            <h2>Why Work With Us?</h2>
+            <p>We believe in fostering a collaborative and inclusive work environment.</p>
+        </section>
+    </a>
+</div>
+<br>
+
+<div id="job-listings">
+    <a href="content2.html">
+        <section>
+            <img src="job_openings.jpeg" alt="Job Openings">
+            <h2>Current Job Openings</h2>
+            <p>Check out our latest job openings and apply today!</p>
+        </section>
+    </a>
+</div>    
+<br>  
+
+<div>
+<section id="services">
+    <h2>Quick Apply</h2>
+    <form id="jobApplicationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feel free to reach out!</p>
+    <p>Email: info@smartrecruiting.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Smart Recruiting. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

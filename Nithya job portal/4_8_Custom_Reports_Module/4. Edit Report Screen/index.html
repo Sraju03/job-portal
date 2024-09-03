@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Report</title>
+    <link rel="stylesheet" href="/4_8_Custom_Reports_Module/4. Edit Report Screen/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit Report</h1>
+        </header>
+
+        <form id="editReportForm">
+            <section id="reportInformation">
+                <h2>Report Information</h2>
+                <label for="reportName">Report Name</label>
+                <input type="text" id="reportName" placeholder="Enter report name" required>
+            </section>
+
+            <section id="filters">
+                <h2>Filters</h2>
+                <label for="dateRange">Date Range</label>
+                <input type="text" id="dateRange" placeholder="Select date range" required>
+
+                <label for="status">Application Status</label>
+                <select id="status">
+                    <option value="">Select status</option>
+                    <option value="new">New</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="hired">Hired</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+
+                <label for="position">Position</label>
+                <select id="position">
+                    <option value="">Select position</option>
+                    <!-- Populate positions dynamically -->
+                </select>
+
+                <label for="source">Source</label>
+                <select id="source">
+                    <option value="">Select source</option>
+                    <!-- Populate sources dynamically -->
+                </select>
+            </section>
+
+            <section id="fieldsToInclude">
+                <h2>Fields to Include</h2>
+                <label for="fields">Fields to Include</label>
+                <div id="fieldsChecklist">
+                    <input type="checkbox" id="applicantName" value="applicantName">
+                    <label for="applicantName">Applicant Name</label><br>
+
+                    <input type="checkbox" id="dateApplied" value="dateApplied">
+                    <label for="dateApplied">Date Applied</label><br>
+
+                    <input type="checkbox" id="statusField" value="status">
+                    <label for="statusField">Status</label><br>
+
+                    <input type="checkbox" id="sourceField" value="source">
+                    <label for="sourceField">Source</label><br>
+                </div>
+            </section>
+
+            <section id="actions">
+                <button type="submit" id="generateReport">Save Changes</button>
+            </section>
+        </form>
+    </div>
+
+    <script src="/4_8_Custom_Reports_Module/4. Edit Report Screen/script.js"></script>
+</body>
+</html>

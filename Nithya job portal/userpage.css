@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffd2e7; /* Bright and inviting color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+img {
+    width: 100%; /* Make the image fill its container horizontally */
+    max-width: 100%; /* Set a maximum width for the image */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Block display for proper centering */
+    margin: 0 auto; /* Center the image horizontally */
+    border: 2px solid #333; /* Add a border around the image */
+    border-radius: 10px; /* Add rounded corners to the image */
+    transition: transform 0.3s; /* Add a hover effect */
+}
+
+img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+nav {
+    background-color: #c4c0cd; /* Soft neutral color */
+    color: #0b0a0a;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0b0a0a; /* Dark text for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #58be14; /* Change color on hover for interactivity */
+}
+
+section {
+    padding: 20px;
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners for softness */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px; /* Space between sections */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px; /* Space below headings */
+}
+
+form {
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light background for forms */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for forms */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Bold labels for clarity */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+select:focus {
+    border-color: #58be14; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+div {
+    margin: 0 auto; /* Center the div */
+    padding: 3px; /* Adjust padding */
+    width: 400px; /* Fixed width */
+}
+
+.ct2 {
+    margin: 0 auto; /* Center the div */
+    padding: 10px; /* Adjust padding */
+    width: 1000px; /* Fixed width */
+}

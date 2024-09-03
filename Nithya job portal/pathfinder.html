@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder</title>
+    <link rel="stylesheet" href="own.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="" />
+    <style>
+        /* General Styles */
+/* General Styles */
+.dropdown-list {
+        display: none;
+        /* position: absolute; */
+        /* z-index: 1; */
+        max-height: 150px;
+        overflow-y: auto;
+        border: 1px solid #544f4f;
+        background-color: white;
+        width: 100%;
+      }
+      .dropdown-list div {
+        padding: 8px;
+        cursor: pointer;
+      }
+      .dropdown-list div:hover {
+        background-color: #b6b4b4;
+      }
+      .dropdown-input {
+        width: 200px;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d08c579;
+    color: #5f5e5e;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.networking-tip {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f0fe;
+    border-left: 5px solid #000000;
+    border-radius: 5px;
+}
+
+.networking-tip h2 {
+    color: hsla(0, 98%, 51%, 0.69);
+    margin-bottom: 10px;
+    cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+.networking-tip p {
+    margin: 0;
+    color: #464545;
+    display: none; /* Hide content initially */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .networking-tip {
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="images/job logo.jpeg"
+            alt="Logo"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a>
+            </li>
+            <li class="dropdown">
+              <a href="jobdisplay.html">Job</a>
+              <!-- <ul class="dropdown-content">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+              </ul> -->
+            </li>
+            <!-- <li><a href="#">Practices</a></li> -->
+            <li><a href="pathfinder.html">Pathfinder</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="profile">
+          <img
+            src="images/profile.png"
+            alt="Profile"
+            id="profileIcon"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="profile-popup" id="profilePopup">
+      <div class="profile-content">
+        <span class="close">&times;</span>
+        <div class="profile-header">
+          <img
+            src="images/profile.png"
+            alt="Profile Picture"
+            class="profile-picture"
+          />
+          <h2>raju s</h2>
+          <p>B.Ed Education at Jeppiaar Engineering College, Chennai</p>
+          <a href="#">View & Update Profile</a>
+        </div>
+        <div class="profile-performance">
+          <div>
+            <h3>0</h3>
+            <p>Search Appearances</p>
+          </div>
+          <div>
+            <h3>0</h3>
+            <p>Recruiter Actions</p>
+          </div>
+        </div>
+        <ul class="profile-menu">
+          <li><a href="#">Career guidance</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../profile.html">Edit profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Profile Slider -->
+    <div class="container">
+        <h1>Networking Tips for Job Seekers</h1>
+        <div class="networking-tip">
+            <h2>1) Trade Associations</h2>
+            <p>
+                What industry are you in? Chances are, there’s some kind of trade association for it, and usually those membership-driven organizations have monthly networking meetings. Usually a fee is charged to attend, but imagine what kind of value you’d get for paying $35 to sit next to the CEO of the company you’re gung-ho about!
+            </p>
+        </div>
+        <div class="networking-tip">
+            <h2>2) Business Groups</h2>
+            <p>
+                A chamber of commerce or business association is usually a bonanza for meeting people and connecting to potential employers. Even if there aren’t any open positions at a particular company, this could prove to be a great opportunity to talk casually with influential people who could be tapped for an informational interview later.
+            </p>
+        </div>
+        <div class="networking-tip">
+            <h2>3) Seminars and Workshops</h2>
+            <p>
+                Connecting up with like-minded people in industry-specific training can be a great way to link up to fellow professionals who could be the ‘eyes and ears’ in the industry and keep you posted on imminent job postings.
+            </p>
+        </div>
+        <div class="networking-tip">
+            <h2>4) Online Business Networking</h2>
+            <p>
+                With the advent of such sites as LinkedIn, Plaxo, and ZoomInfo, having an Internet presence can boost your networking opportunities. Are you an expert in a particular field? Answer questions on sites like LinkedIn and establish yourself as an industry source. That helps position you as a helpful and knowledgeable contributor, which can have a great benefit when employers search these sites.
+            </p>
+        </div>
+        <div class="networking-tip">
+            <h2>5) Talk to Your Friends</h2>
+            <p>
+                Letting friends know you are on the job hunt can also bring contacts and informational interviews. Everyone needs a job search advocate or two, and the people that you know can step into this role and even connect you to possible employment opportunities.
+            </p>
+        </div>
+        <div class="networking-tip">
+            <h2>6) Don’t Be Afraid to Use Your Rolodex</h2>
+            <p>
+                In this ‘dog-eat-dog’ world, everyone else is leveraging their contacts to the fullest, and so should you. Most business people have a healthy Rolodex bulging with business and industry contacts. It’s time to cash in those chips! You need to be absolutely fearless and jump right in. Send these contacts an email or give them a ring to let them know what kind of job you are seeking. You might be completely surprised what happens next!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document
+        .getElementById("profileIcon")
+        .addEventListener("click", function () {
+          document.getElementById("profilePopup").style.display = "flex";
+        });
+
+      document.querySelector(".close").addEventListener("click", function () {
+        document.getElementById("profilePopup").style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === document.getElementById("profilePopup")) {
+          document.getElementById("profilePopup").style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      // Function to toggle the dropdown visibility
+      function toggleDropdown(event, dropdownId) {
+        event.stopPropagation(); // Prevents the event from bubbling up to the window click event
+        const dropdown = document.getElementById(dropdownId);
+        const isVisible = dropdown.style.display === "block";
+
+        // Close all dropdowns
+        closeAllDropdowns();
+
+        // Toggle the clicked dropdown
+        if (!isVisible) {
+          dropdown.style.display = "block";
+        }
+      }
+
+      // Function to close all dropdowns
+      function closeAllDropdowns() {
+        const dropdowns = document.querySelectorAll(".dropdown-list");
+        dropdowns.forEach((dropdown) => {
+          dropdown.style.display = "none";
+        });
+      }
+
+      // Event listener to close dropdowns when clicking outside
+      window.onclick = function () {
+        closeAllDropdowns();
+      };
+
+      // Function to filter dropdown options
+      function filterFunction(dropdownId) {
+        const input =
+          document.getElementById(dropdownId).previousElementSibling;
+        const filter = input.value.toUpperCase();
+        const divs = document
+          .getElementById(dropdownId)
+          .getElementsByTagName("div");
+        for (let i = 0; i < divs.length; i++) {
+          const txtValue = divs[i].textContent || divs[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            divs[i].style.display = "";
+          } else {
+            divs[i].style.display = "none";
+          }
+        }
+      }
+
+      // Function to select an option and set the input value
+      function selectOption(value, inputId) {
+        const input = document.getElementById(inputId);
+        input.value = value;
+        input.nextElementSibling.style.display = "none";
+      }
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all networking-tip elements
+    const tips = document.querySelectorAll('.networking-tip');
+
+    // Add click event listener to each tip
+    tips.forEach(tip => {
+        tip.querySelector('h2').addEventListener('click', function () {
+            const content = this.nextElementSibling;
+            // Toggle the visibility of the content
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="/4_1_User_login/login/styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm" method="POST" action="login.php">
+        <div class="form-group">
+          <label for="usernameEmail">Username or Email</label>
+          <input
+            type="text"
+            id="usernameEmail"
+            name="usernameEmail"
+            placeholder="Enter your username or email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            minlength="8"
+          />
+        </div>
+        <div class="form-group remember-me">
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <button type="submit">Login</button>
+        <div class="links">
+          <a href="/4_1_User_login/Reset/Reset.html">Forgot Password?</a>
+          <a href="/4_1_User_login/Signup/signup.html">Sign Up</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="/4_1_User_login/login/script.js"></script>
+  </body>
+</html>
